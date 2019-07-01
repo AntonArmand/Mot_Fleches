@@ -2,38 +2,45 @@ package fr.armand.models;
 
 public class Definition {
 
-    private String text;
-    private int lenght;
+    private String intitule;
+    private String word;
+    private Direction direction;
 
-
-    public void setText(String parText)
+    public Definition()
     {
-        this.text = parText;
+        super();
     }
 
-    public void setLenght(int parLenght)
-    {
-        this.lenght = parLenght;
+    public void setWord(String parWord){
+        this.word = parWord;
     }
 
-    public String getText()
-    {
-        return this.text;
+    public String getWord(){
+        return this.word;
     }
 
-    public int getLenght()
-    {
-        return this.lenght;
+    public void setIntitule(String parIntitule){
+        this.intitule = parIntitule;
     }
-    public enum Sens {
-        BOT,
-        RIGHT
+
+    public String getIntitule(){
+        return this.intitule + "";
+    }
+
+    public void setDirection(Direction parDirection)
+    {
+        this.direction = parDirection;
+    }
+    public Direction getDirection()
+    {
+        return this.direction;
     }
 
     public enum Direction {
-        HORIZONTAL,
-        VERTICAL
+        HD,
+        HI,
+        VD,
+        VI
     }
-
 }
 
